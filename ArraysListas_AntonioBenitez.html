@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Artículos</title>
+    <script src="ArraysListas_JS_AntonioBenitez.js"></script>
+    <link rel="stylesheet" href="ArraysListas_CSS_AntonioBenitez.css">
+</head>
+<body>
+    <h1 class="title"> Compra de artículos </h1>
+    <form>
+        <div class="masterDiv" style="height: 100vh">
+            <div style="margin-top:1.5em">
+                <label for ="nombre">Nombre del producto:</label>
+                <input type="text" id="nombre" onchange="validarInputs()" required placeholder="Introduzca el nombre del producto aquí.">
+            <div class="warningDiv">
+                <p id="EX_Nombre"></p>
+            </div>
+            </div>
+
+            <div>
+                <label for ="precio">Precio:</label>
+                <input type="number" id="precio" onchange="validarInputs()" required placeholder="Introduzca el precio aquí.">
+            <div class="warningDiv">
+                <p id="EX_Precio"></p>
+            </div>
+            </div>
+            
+            <div>
+                <label for ="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" onchange="validarInputs()" required placeholder="Introduzca la cantidad aquí.">
+            <div class="warningDiv">
+                <p id="EX_Cantidad"></p>
+            </div>
+            </div>
+
+            <div class="buttonDiv">
+                <button type="button" onClick="anadirArticulo()">Añadir</button>
+                <input type="reset" class="button" onClick="resetInputs()" value="Limpiar">
+                <button type="button" onClick="resetArticulos()">Reiniciar</button> 
+            </div>
+
+            <div class="pBox" style="height:60vh; margin-top:3vh">
+                <p style="height:4vh; overflow:hidden"><strong>ARTÍCULO                                               PRECIO                                                       CANTIDAD</strong></p>
+                <ul id="lista_articulos"></ul>
+            </div>
+        </div>
+        <div class="masterDiv" style="height: 40vh">
+            <div style="margin-top:1.5em">
+                <label for ="pago">Efectivo a pagar:</label>
+                <input type="text" id="pago" required placeholder="Introduzca la cantidad en efectivo aquí.">
+            <div class="warningDiv">
+                <p id="EX_Pago"></p>
+            </div>
+            </div>
+
+            <div class="buttonDiv">
+                <button type="button" onClick="pagar()">Pagar</button>
+                <input type="reset" class="button" onClick="resetPago()" value="Limpiar">
+            </div>
+
+            <div class="pBox" style="height:12vh;margin-top:3vh">
+                <p id="Resultado" style="overflow:hidden"><strong>Total:</strong> 0€</strong></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+body{font-family:'Roboto Flex'; background-color: rgb(72, 67, 75); font-size:1.25em}
+
+.title{
+    text-align:center;
+    margin-top:10vh;
+    font-size:5em;
+    margin-bottom:5vh;
+    letter-spacing:2.5px;
+    transition: all 0.15s;
+    width:75vw;
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+}
+.title:hover{letter-spacing:5px;}
+
+input{width:20vw; margin-bottom:2em; height:2.5vh;}
+.inputEX{border: solid 2px red; border-radius:3px; color:red}
+
+button, .button{
+    font-family:'Roboto Flex';
+    font-weight:bold;
+    width:4vw;
+    margin-right:2em;
+    height:5vh;
+    border:solid 2px rgb(42, 147, 189);
+    border-radius:5px;
+    background-color:rgb(169, 231, 255);
+    transition: all 0.05s
+}
+button:hover, .button:hover{transform:scale(1.07)}
+button:active, .button:active{background-color:rgb(79, 133, 235); transform:scale(0.95);border:solid 2px rgb(26, 79, 139);}
+
+label{margin-right:1vw;font-weight:bold;width:11vw}
+
+div{display:flex; flex-direction:row;}
+.warningDiv > p{
+    position:absolute;
+    padding:10px;
+    top:-1.75vh;
+    left:1.25vw;
+    background-color:rgb(223, 84, 84);
+    border-radius:5px;
+    display: none;
+    align-items:center;
+    width:15vw;
+    height:1vh;
+    font-size:0.65em;
+    color:white
+}
+.warningDiv{position:relative; width:0; height:0;}
+.masterDiv{
+    margin-top:1em;
+    background-color: rgb(240, 240, 240);
+    border: solid 5px darkgrey;
+    border-radius:15px; 
+    height: 45vh;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto; 
+    display:flex;
+    align-items:left;
+    width:50vw;
+    color:rgb(0, 0, 0);
+    padding:3vw;
+    flex-wrap: wrap;
+    padding-bottom:0vw;
+    padding-top:1vw
+}
+.masterDiv > .pBox {
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 41.5vw;
+    padding:25px;
+    height:30vh;
+    border-radius:10px;
+    border: solid 2px black;
+    margin-right:auto;
+    margin-left:auto
+}
+.masterDiv > .pBox > p{line-height:2em; margin:0; white-space: pre; overflow-y:scroll;}
+.masterDiv > .pBox > ul{height: 55vh; line-height:2em; margin:0;padding-top:1.5vh; white-space: pre; overflow-y:scroll;}
+.masterDiv > h1{margin: 0; text-align:center; font-size:3em}
+.buttonDiv{justify-content: center;align-items: center;}
+.buttonDiv > input{margin:0; margin-right:2em}
+.masterDiv > .pBox > ul > li{tab-size:16}
